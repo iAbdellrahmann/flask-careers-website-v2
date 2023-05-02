@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'bootstrap.html' %}
+    <title>{{ job.title }}</title>
+    <style>
+        #banner {
+          height: 360px;
+          width: 100%;
+          object-fit:cover;
+          margin-bottom: 16px;
+        }
+      </style>
+  
+</head>
+<body>
+    {% include 'nav.html' %}
+    <img class="img-fluid" id="banner" src="https://jovian-careers-website.aakashns.repl.co/static/banner.jpeg" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Title</h3>
+                <p>{{job.title}}</p>
+            </div>
+            <div class="col-md-6">
+                <h3>Location</h3>
+                <p>{{job.location}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Salary</h3>
+                <p>{{job.currency}} {{job.salary}}</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <h3>Responsibilities</h3>
+                <ul>
+                    {% for line in job.responsibilities.split("\n") %}
+                    <li>{{line}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h3>Requirements</h3>
+                <ul>
+                    {% for line in job.requirements.split("\n") %}
+                    <li>{{line}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+<!-- Bootstrap JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-Y6a+fIPzw9u4qJ4F6+u8COlE77gfvPcYpPT+mHXE1b+GApzB9QJncaAcnkWJn8oCj+NOgQZ/0+RSzubJt+Bv/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+</html>
