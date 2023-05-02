@@ -7,7 +7,7 @@ To run this project on your local machine, follow these steps:
 1. Clone the repository: git clone https://github.com/<username>/<repository>.git
 2. Install the required packages: pip install -r requirements.txt
 3. Set the environment variables for your database and email configuration:
- 1. DB_CONNECTION_STRING: The connection URL for your MySQL database.
+ * DB_CONNECTION_STRING: The connection URL for your MySQL database.
 4. Start the server: python app.py
 5. Open your web browser and go to http://localhost:5000
 
