@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    {% include 'bootstrap.html' %}
+    <title>Job Application Confirmation</title>
+  </head>
+  <body>
+    <div class="container my-5">
+      <div class="card text-center">
+        <div class="card-header">
+          Job Application Confirmation
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Thank you for applying! {{application['name']}}</h5>
+          <p class="card-text">We have received your application for the {{job['title']}} vacancy.</p>
+          <a href="/" class="btn btn-primary">Go back to homepage</a>
+        </div>
+        <div class="card-footer text-muted">
+          &copy; 2023 Company Name. All rights reserved.
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js" integrity="sha512-Y6a+fIPzw9u4qJ4F6+u8COlE77gfvPcYpPT+mHXE1b+GApzB9QJncaAcnkWJn8oCj+NOgQZ/0+RSzubJt+Bv/Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
